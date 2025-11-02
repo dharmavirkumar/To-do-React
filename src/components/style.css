@@ -28,7 +28,7 @@
     align-items: center;
     flex-direction: column;
     border: 1px solid black;
-   background-color: #9ECFD4;
+  background-image: radial-gradient(circle at center,#9BB4C0,#B7E5CD);
     overflow: auto;
 }
 .todo{
@@ -123,6 +123,7 @@ button:hover {
 .header{
     text-align: center;
     padding: 15px;
-    background-color: #016B61;
+     background-color: #305669;
+    color: #FFFFFF;
     border: 1px solid black;
 }
