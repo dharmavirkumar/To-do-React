@@ -20,7 +20,7 @@ function App() {
               alert("Please enter task");return;
              }
               if (items.some((item)=>(item.name).toLowerCase()===newtask.toLowerCase())) { //if duplicate exists
-    alert("This task already exists!");
+    alert("already exists!");
     return;
   }
           if(editind!=null){ // task exists in items and it needs to be edited
@@ -28,7 +28,7 @@ function App() {
         item.id === editind ? { ...item, name: newtask } : item
       );
               setitem(updated);
-              settask(""); //remove from input 
+              settask(""); 
               seteditind(null); //after edit make it null
           }
           else{ //new task to be added to list
@@ -55,7 +55,7 @@ function App() {
       <div className="body">
          <div className="todo">
             {/* input field with attributes type, value,placeholder */} 
-            <input type="text" value={taskname} onChange={(e)=>handlechange(e)} placeholder="Task To Do" className="input"></input>
+            <input type="text" value={taskname} onChange={(e)=>handlechange(e)} placeholder="Enter Your ToDay Task" className="input"></input>
             {/*button to add task into items */}
             <button onClick={handleclick} className="addbut">{editind==null ? "Add" : "Update"}</button>
           </div>
